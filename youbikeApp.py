@@ -32,7 +32,7 @@ if btn:
     # 加入標記
     arr = df[['sna', 'sarea', 'ar', 'available_return_bikes', 'latitude', 'longitude']].to_numpy()
 
-    for idx, i in enumerate(arr):
+    for i in arr:
         popup_content = f"""
             <div style='width: 300px;'>
             {i[0]} ( {i[2]} ) 
