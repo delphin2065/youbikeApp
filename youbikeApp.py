@@ -14,6 +14,7 @@ st.header('北市YouBike查詢 App')
 st.write('資料來源: YouBike2.0臺北市公共自行車即時資訊, from https://data.gov.tw/dataset/137993')
 image_url = os.path.join(os.getcwd(), 'YouBike.png')
 
+
 dfq = data()
 locations = np.unique(dfq['sarea'])
 location = st.selectbox('選擇項目', locations)
@@ -45,7 +46,7 @@ if btn:
         popup_content = f"""
             <div style='width: 300px;'>
             {i[0]} ( {i[2]} ) 
-            <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> {i[3]}輛可租, {i[-3]}</div>"""
+            <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> {i[3]}輛可租用</div>"""
         folium.Marker(
         location = [i[-2], i[-1]], 
         popup = popup_content,
