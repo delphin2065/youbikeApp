@@ -44,9 +44,11 @@ if btn:
 
     for i in arr:
         popup_content = f"""
-            <div style='width: 300px;'>
-            {i[0]} ( {i[2]} ) 
-            <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> {i[3]}輛可租用</div>"""
+            <div style='width: 200px;'>
+            {i[0]} ( {i[2]} )
+            <br> 
+            <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> 
+            {i[3]}輛可租用</div>"""
         folium.Marker(
         location = [i[-2], i[-1]], 
         popup = popup_content,
