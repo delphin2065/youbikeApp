@@ -12,7 +12,7 @@ import time
 
 st.header('北市YouBike查詢 App')
 st.write('資料來源: YouBike2.0臺北市公共自行車即時資訊, from https://data.gov.tw/dataset/137993')
-image_url = os.path.join(os.getcwd(), 'YouBike.png')
+
 
 
 dfq = data()
@@ -41,13 +41,15 @@ if btn:
 
     # # 加入標記
     arr = df[['sna', 'sarea', 'ar', 'available_return_bikes', 'updateTime', 'latitude', 'longitude']].to_numpy()
-
+    image_url = os.path.join(os.getcwd(), 'YouBike.png')
     for i in arr:
+        # <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> 
+            
         popup_content = f"""
-            <div style='width: 200px;'>
+            <div style='width: 250px;'>
             {i[0]} ( {i[2]} )
-            <br> 
-            <img src='{image_url}' style='width: auto; height: 15px;' alt='youbike'> 
+            <br>
+            <i class="fa-solid fa-bicycle"></i> 
             {i[3]}輛可租用</div>"""
         folium.Marker(
         location = [i[-2], i[-1]], 
