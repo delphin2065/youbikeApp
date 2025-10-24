@@ -11,7 +11,7 @@ import time
 
 
 st.header('北市YouBike查詢 App')
-st.write('資料來源: YouBike2.0臺北市公共自行車即時資訊, from https://data.gov.tw/dataset/137993')
+st.write('資料來源: YouBike2.0臺北市公共自行車即時資訊(每分鐘更新一次), from https://data.gov.tw/dataset/137993')
 
 
 
