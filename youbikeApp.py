@@ -47,6 +47,7 @@ if st.session_state.auto_refresh:
     st.info(f"🔄 自動更新中... 最後更新: {dt.datetime.now(tz).strftime('%H:%M:%S')}")
     
     
+    
     # 計算中心點
     latitude_mean = df['latitude'].mean()
     longitude_mean = df['longitude'].mean()
