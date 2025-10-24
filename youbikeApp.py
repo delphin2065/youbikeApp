@@ -44,6 +44,7 @@ if st.session_state.auto_refresh:
     # 顯示更新時間
     st.info(f"🔄 自動更新中... 最後更新: {pd.Timestamp.now().strftime('%H:%M:%S')}")
     
+    
     # 計算中心點
     latitude_mean = df['latitude'].mean()
     longitude_mean = df['longitude'].mean()
