@@ -7,8 +7,9 @@ from streamlit_folium import st_folium
 from streamlit_folium import folium_static
 import os
 import time
-
-
+import pytz
+tz = pytz.timezone('Asia/Taipei')
+import datetime as dt
 
 st.header('北市YouBike查詢 App')
 st.write('資料來源: YouBike2.0臺北市公共自行車即時資訊(每分鐘更新一次), from https://data.gov.tw/dataset/137993')
@@ -42,7 +43,7 @@ if st.session_state.auto_refresh:
     df.reset_index(inplace=True, drop=True)
     
     # 顯示更新時間
-    st.info(f"🔄 自動更新中... 最後更新: {pd.Timestamp.now().strftime('%H:%M:%S')}")
+    st.info(f"🔄 自動更新中... 最後更新: {dt.datetime.now(tz).strftime('%H:%M:%S')")
     
     
     # 計算中心點
