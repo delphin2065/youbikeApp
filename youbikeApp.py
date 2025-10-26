@@ -71,8 +71,8 @@ if st.session_state.auto_refresh:
             icon=folium.Icon(color='green') 
         ).add_to(m)
     
-    folium_static(m)
-    
+    # folium_static(m)
+    st_folium(m, width=None, height=600, use_container_width=True)
     # 每5秒自動更新
     time.sleep(60)
     st.rerun()
