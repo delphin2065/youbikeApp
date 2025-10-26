@@ -72,7 +72,7 @@ if st.session_state.auto_refresh:
         ).add_to(m)
     
     # folium_static(m)
-    st_folium(m, width=None, height=600, use_container_width=True)
-    # 每5秒自動更新
+    st_folium(m, width=None, height=400, use_container_width=True)
+    # 每60秒自動更新
     time.sleep(60)
     st.rerun()
